@@ -1,3 +1,7 @@
+# Amazon Fraud Detector Sample Code - Test the prediction API
+# Adekunle Lawal - lawaladekunle@gmail.com
+# 
+
 from email_validator import validate_email, EmailNotValidError
 import boto3, json, ipaddress, socket, time, uuid
 from datetime import datetime
