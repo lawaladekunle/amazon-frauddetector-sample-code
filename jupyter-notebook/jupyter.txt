@@ -1,0 +1,23 @@
+# Open a Jupyter Notebook and Run the following commands
+# Check the get_prediction-sample-code folder for sample values 
+
+# Step 1 -: Import boto3
+import boto3
+
+# Step 2 -: Access the frauddetector client
+fraudDetector = boto3.client('frauddetector')
+
+# Step 3 -: Run the get_event_prediction method
+fraudDetector.get_event_prediction(
+detectorId = 'Detector_Name',
+detectorVersionId='Detector_Version_As_Integer',
+eventId = '802454d3-f7d8-482d-97e8-c4b6db9a0771', #Use Any
+eventTypeName = 'Event_Type_Name',
+eventTimestamp = '2020-07-31T20:20:48Z', #Use Any
+entities = [{'entityType':'store_user', 'entityId':'7654'}],
+eventVariables = {
+    'email_address' : 'fake_mandy99@example.org',
+    'ip_address' : '77.238.112.5'
+}
+)
+
