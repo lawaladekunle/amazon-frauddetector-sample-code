@@ -85,7 +85,7 @@ modelNumber = jsonFeed["modelScores"][0]["modelVersion"]["modelVersionNumber"]
 modelName = jsonFeed["modelScores"][0]["modelVersion"]["modelId"]
 
 httpStatusCode = jsonFeed["ResponseMetadata"]["HTTPStatusCode"]
-modelOutputPrediction = jsonFeed["modelScores"][0]["scores"]
+modelOutputPrediction = json.dumps(jsonFeed["modelScores"][0]["scores"])
 modelRuleOutcome = jsonFeed["ruleResults"][0]["outcomes"][0]
 
 # Outputs
